@@ -9,7 +9,7 @@ const ProfileTable = () => {
   const fetchProfiles = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5001/api/profile/getProfile"
+        "https://me-api-playground.vercel.app/api/profile/getProfile"
       );
       setProfiles(response.data);
     } catch (error) {

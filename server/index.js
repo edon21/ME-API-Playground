@@ -13,6 +13,13 @@ backend.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
+backend.get("/", (req, res) => {
+    res.json({
+        status: "active",
+        message: "Backend is running on Vercel "
+    });
+});
+
 backend.use(routes);
 
 const MONGO_URI = process.env.MONGO_URI;
